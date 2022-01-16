@@ -8,3 +8,13 @@
     font-family: 'Be Vietnam Pro', sans-serif;
     letter-spacing: -0.04em;
 }
+html, body {
+    position: relative;
+    background-color: #EAE7DD;
+    z-index: -100;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    color: #2B2621;
+    line-height: 200%;
+}
