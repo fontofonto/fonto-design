@@ -32,10 +32,9 @@ export default {
 
 <style lang="postcss" scoped>
 .page-wrapper {
-  @apply px-20;
 }
 .intro-wrapper {
-  @apply mt-10;
+  @apply w-10/12 mx-auto mt-10;
   .title {
     @apply text-9xl font-bold;
   }
@@ -52,10 +51,10 @@ export default {
   }
 }
 .resume-wrapper {
-  @apply mt-20 text-4xl font-bold text-right;
+  @apply w-10/12 mx-auto mt-20 text-4xl font-bold text-right;
 }
 .work-wrapper {
-  @apply mt-40;
+  @apply w-10/12 mx-auto mt-40;
   .title {
     @apply font-light italic text-5xl;
   }
