@@ -41,13 +41,14 @@ export default {
   .subtitle {
     @apply text-4xl font-medium mt-10;
     line-height: 150%;
-    span {
+    /* Bug: the after pseudo element doesn't work when the window breaks the line */
+    /* span {
       @apply relative;
       &:after {
         @apply block absolute -z-[1] w-[102%] h-4 bottom-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 rounded-sm;
         content: '';
       }
-    }
+    } */
   }
 }
 .resume-wrapper {
