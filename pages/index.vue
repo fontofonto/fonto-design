@@ -2,24 +2,23 @@
   <div class="page-wrapper">
     <!-- intro -->
     <div class="intro-wrapper">
-      <h1 class="title">FONTO</h1>
-      <h2 class="subtitle">
-        An <span>User Experience Designer</span> and
-        <span>Frontend Developer</span> from Hong Kong. <br /><br />Now living
-        in Vancouver.
+      <h1 class="my-name">Waikwan Lam</h1>
+      <h2 class="short-introduction">
+        <span
+          >An User Experience Designer and Frontend Developer from Hong
+          Kong.</span
+        >
+        <br /><br />
+        <span>Now living in Vancouver.</span>
       </h2>
     </div>
     <!-- resume -->
     <div class="resume-wrapper">
-      <a href="#!">Get My Resume</a>
+      <LinkWithArrow />
     </div>
     <!-- Work -->
-    <div class="work-wrapper">
-      <h3 class="title">Work</h3>
-      <a href="#!">RewardMe</a>
-      <a href="#!">MeFi</a>
-      <a href="#!">Measurable Data Tokens</a>
-    </div>
+    <IndexWorkSection />
+
     <LinesBackground />
   </div>
 </template>
@@ -27,6 +26,36 @@
 <script>
 export default {
   name: 'IndexPage',
+  mounted() {
+    let tl = new gsap.timeline()
+
+    let nameTextList = new SplitText('.my-name', {
+      type: 'chars,words',
+      wordsClass: 'overflow-hidden',
+      position: 'absolute',
+    })
+    let introTextList = new SplitText('.short-introduction', {
+      type: 'chars,words',
+      wordsClass: 'overflow-hidden',
+      position: 'absolute',
+    })
+
+    tl.from(nameTextList.chars, {
+      y: '100%',
+      duration: 0.5,
+      ease: 'expo.out',
+      stagger: 0.05,
+    }).from(
+      introTextList.chars,
+      {
+        y: '100%',
+        duration: 0.2,
+        ease: 'expo.out',
+        stagger: 0.01,
+      },
+      '+=0.2'
+    )
+  },
 }
 </script>
 
@@ -35,12 +64,12 @@ export default {
 }
 .intro-wrapper {
   @apply w-10/12 mx-auto mt-10;
-  .title {
-    @apply text-9xl font-bold;
+  .my-name {
+    @apply text-6xl md:text-8xl font-bold;
   }
-  .subtitle {
-    @apply text-4xl font-medium mt-10;
-    line-height: 150%;
+  .short-introduction {
+    @apply text-xl md:text-4xl font-medium mt-10;
+    /* line-height: 150%; */
     /* Bug: the after pseudo element doesn't work when the window breaks the line */
     /* span {
       @apply relative;
@@ -52,15 +81,6 @@ export default {
   }
 }
 .resume-wrapper {
-  @apply w-10/12 mx-auto mt-20 text-4xl font-bold text-right;
-}
-.work-wrapper {
-  @apply w-10/12 mx-auto mt-40;
-  .title {
-    @apply font-light italic text-5xl;
-  }
-  a {
-    @apply block font-medium text-7xl mt-10;
-  }
+  @apply w-10/12 mx-auto mt-20 text-4xl font-medium text-right;
 }
 </style>
