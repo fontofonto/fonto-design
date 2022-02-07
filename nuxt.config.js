@@ -1,10 +1,13 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  server: {
+    host: '0.0.0.0' // default: localhost
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'fonto-design',
+    title: 'FONTO Design',
     htmlAttrs: {
       lang: 'en',
     },
@@ -15,6 +18,11 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      { src: '/js/gsap.min.js' },
+      { src: '/js/ScrollTrigger.min.js' },
+      { src: '/js/SplitText.min.js' }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
