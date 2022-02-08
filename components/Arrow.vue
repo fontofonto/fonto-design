@@ -31,9 +31,6 @@ export default {
   data: () => ({
     length: 80,
     tweenedLength: 80,
-    headpath:
-      'M65.4142 0.585785L79.8285 15L65.4142 29.4142L62.5858 26.5858L74.1716 15L62.5858 3.41421L65.4142 0.585785Z',
-    tailpath: 'M0 15H77.6',
   }),
   watch: {
     isActive: function (newValue) {
