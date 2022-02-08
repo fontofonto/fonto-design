@@ -4,14 +4,16 @@
     <div class="intro-wrapper">
       <h1 class="my-name">Waikwan Lam</h1>
       <h2 class="short-introduction">
-        <span>An User Experience Designer and Frontend Developer.</span>
+        <span>A User Experience Designer and Frontend Developer.</span>
         <br /><br />
         <span>Now living in Vancouver.</span>
       </h2>
     </div>
     <!-- resume -->
     <div class="resume-wrapper">
-      <LinkWithArrow />
+      <a href="#!">
+        <IndexResumeBadge />
+      </a>
     </div>
     <!-- Work -->
     <IndexWorkSection />
@@ -90,7 +92,10 @@ export default {
   }
 }
 .resume-wrapper {
-  @apply w-10/12 mx-auto mt-20 text-4xl font-medium text-right;
+  @apply w-10/12 mx-auto mt-20 flex flex-row justify-end;
+  a {
+    @apply block w-8/12 md:w-4/12;
+  }
 }
 
 .footer {
