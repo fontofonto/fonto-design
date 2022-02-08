@@ -1,10 +1,10 @@
 <template>
-  <div class="work-wrapper">
-    <h3 class="title">Work</h3>
+  <div class="side-project-wrapper">
+    <h3 class="title">Side Projects</h3>
     <div class="link-group">
-      <a href="#!">RewardMe</a>
-      <a href="#!">MeFi</a>
-      <a href="#!">Measurable Data Tokens</a>
+      <a href="#!">Animations</a>
+      <a href="#!">Videos</a>
+      <a href="#!">Sketches</a>
     </div>
   </div>
 </template>
@@ -15,12 +15,12 @@ export default {
     initiateAnimation() {
       let tl = gsap.timeline()
 
-      tl.from('.work-wrapper .title', {
+      tl.from('.side-project-wrapper .title', {
         y: '200%',
         opacity: 0,
         duration: 0.5,
         stagger: 0.1,
-      }).from('.work-wrapper .link-group a', {
+      }).from('.side-project-wrapper .link-group a', {
         y: '200%',
         opacity: 0,
         duration: 0.5,
@@ -29,7 +29,7 @@ export default {
 
       ScrollTrigger.create({
         animation: tl,
-        trigger: '.work-wrapper',
+        trigger: '.side-project-wrapper',
       })
     },
   },
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.work-wrapper {
+.side-project-wrapper {
   @apply w-10/12 mx-auto mt-40;
   .title {
     @apply font-light italic text-5xl;

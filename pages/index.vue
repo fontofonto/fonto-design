@@ -4,10 +4,7 @@
     <div class="intro-wrapper">
       <h1 class="my-name">Waikwan Lam</h1>
       <h2 class="short-introduction">
-        <span
-          >An User Experience Designer and Frontend Developer from Hong
-          Kong.</span
-        >
+        <span>An User Experience Designer and Frontend Developer.</span>
         <br /><br />
         <span>Now living in Vancouver.</span>
       </h2>
@@ -18,6 +15,18 @@
     </div>
     <!-- Work -->
     <IndexWorkSection />
+
+    <!-- Side Projects -->
+    <IndexSideProjectSection />
+
+    <div class="footer">
+      <a
+        class="transform hover:scale-110 transition-transform ease-in-out"
+        href="#!"
+      >
+        <IndexContactMeBadge />
+      </a>
+    </div>
 
     <LinesBackground />
   </div>
@@ -53,7 +62,7 @@ export default {
         ease: 'expo.out',
         stagger: 0.01,
       },
-      '+=0.2'
+      '+=0.1'
     )
   },
 }
@@ -82,5 +91,9 @@ export default {
 }
 .resume-wrapper {
   @apply w-10/12 mx-auto mt-20 text-4xl font-medium text-right;
+}
+
+.footer {
+  @apply flex items-center justify-center my-40;
 }
 </style>
